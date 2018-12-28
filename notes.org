@@ -1,0 +1,24 @@
+* Features
+** Easy encoding of nodes
+** Coloring of nodes and edges
+** Grouping of nodes and edges
+** Use graphviz or manual layouts
+
+* Restritions
+** No partial functions
+** Errors using Error types and Either datatype
+
+* Goal
+  Use this as a case study in proper levels of abstraction
+
+* Progress
+** December 28th, 2018
+   Started project
+   - implemented core data types
+   - encoded example mindmap for testing
+   Further Work
+   - TODO Implement safety checks for topics and relations so that the relations
+     only contain valid topics and topics don't have any repeats
+   - NEXT Write diagrams function to layout topics in a cluster
+     - Start with a function to print a single topic with its text, make sure 
+       it automatically scales with text
