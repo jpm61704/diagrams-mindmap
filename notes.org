@@ -24,4 +24,5 @@
        it automatically scales with text
        
 ** January 2nd, 2019
-   - GOAL Write layout functions for nodes
+   GOAL Write layout functions for nodes
+   COMPLETED grid layout function
