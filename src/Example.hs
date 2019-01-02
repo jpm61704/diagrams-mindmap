@@ -39,6 +39,6 @@ relations = [ "Language" -| "terms defined by"   |-> "Syntax"
             , "CFGs"     -| "constructed by"     |-> "Production Rules"
 
             , "Production Rules" -| "realize"    |-> "CFGs"
-            , "Production Rules" -| "produce"    |-> "Terms" 
+            , "Production Rules" -| "produce"    |-> "Terms"
             , "Production Rules" -| "some are"   |-> "Context Sensitive Rules"
             ]

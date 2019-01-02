@@ -22,3 +22,6 @@
    - NEXT Write diagrams function to layout topics in a cluster
      - Start with a function to print a single topic with its text, make sure 
        it automatically scales with text
+       
+** January 2nd, 2019
+   - GOAL Write layout functions for nodes

@@ -12,6 +12,7 @@ module Construct
     
     -- * Mindmap
   , Mindmap
+  , topics
    
     
   ) where
@@ -58,6 +59,5 @@ data Mindmap = Mindmap { _topics    :: [Topic]
                        , _relations :: [Relation]}
 
 
-
-
-
+topics :: Mindmap -> [Topic]
+topics = _topics
