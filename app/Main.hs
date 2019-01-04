@@ -1,6 +1,13 @@
 module Main where
 
-import Lib
+import Diagrams.Prelude
+import Diagrams.Backend.SVG.CmdLine
+
+import Construct
+import Diagram
+import Layout
+import Example
 
 main :: IO ()
-main = someFunc
+main = mainWith $ x
+  where (Right x) = topicNodes exampleMM (grid exampleMM 10)

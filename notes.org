@@ -26,3 +26,14 @@
 ** January 2nd, 2019
    GOAL Write layout functions for nodes
    COMPLETED grid layout function
+   NEXT Write diagram function that takes layout and places the nodes
+   
+** January 3rd, 2019
+   Writing function to print topic nodes
+   Done.
+   Now need to solve some problems: 
+   - Getting the node to scale with text or the text to scale with nodes
+     - Might need to use the rasterific backend to achieve this
+     - See Diagrams.Backend.Rasterific.Text
+   - Support shapes other than circles
+   - constructors and composition functions for Layouts

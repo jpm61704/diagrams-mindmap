@@ -3,18 +3,19 @@ module Construct
     -- * Topics
     Topic
   , topic
+  , topicName
 
     -- * Relations
   , Relation
     -- ** Relation Operators
   , (|->)
   , (-|)
-    
+
     -- * Mindmap
-  , Mindmap
+  , Mindmap(Mindmap)
   , topics
-   
-    
+
+
   ) where
 
 --------------------------------------------------------------------------------
@@ -26,6 +27,9 @@ data Topic = Topic { _text :: String } deriving (Eq, Ord, Show)
 
 topic :: String -> Topic
 topic = Topic
+
+topicName :: Topic -> String
+topicName = _text
 
 --------------------------------------------------------------------------------
 ------------------------------ Relation ----------------------------------------

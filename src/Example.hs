@@ -24,8 +24,8 @@ topic_strings = [ "Language"
                 , "Edit-Actions"
                 ]
 
-topics :: [Topic]
-topics = map topic topic_strings
+e_topics :: [Topic]
+e_topics = map topic topic_strings
 
 relations :: [Relation]
 relations = [ "Language" -| "terms defined by"   |-> "Syntax"
@@ -42,3 +42,6 @@ relations = [ "Language" -| "terms defined by"   |-> "Syntax"
             , "Production Rules" -| "produce"    |-> "Terms"
             , "Production Rules" -| "some are"   |-> "Context Sensitive Rules"
             ]
+
+exampleMM :: Mindmap
+exampleMM = Mindmap e_topics relations

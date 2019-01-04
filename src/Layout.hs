@@ -4,6 +4,7 @@ module Layout
     Point
   , Layout
   , Spacing
+  , DiagramError
 
     -- * Layout Functions
   , grid
@@ -19,11 +20,11 @@ import qualified Data.Map.Lazy as M
 
 type Point = (Double, Double)
 
-type Layout = Topic -> Either LayoutError Point
+type Layout = Topic -> Either DiagramError Point
 
 type Spacing = Double
 
-data LayoutError = NotATopic deriving (Eq, Show)
+data DiagramError = NotATopic deriving (Eq, Show)
 
 
 --------------------------------------------------------------------------------
@@ -37,7 +38,7 @@ grid mm s = \k -> M.findWithDefault (Left NotATopic) k point_map
   where ts        = topics mm
         row_size  = (rowSize . length) ts
         ts'       = zip ts [0..]
-        point_map = foldr (\(t,n) -> M.insert t (Right $ point row_size n)) mempty ts'
+        point_map = foldr (\(t,n) -> M.insert t (Right $ point s row_size n)) mempty ts'
 
 
 rowSize :: (Integral a, Integral b) => a -> b
@@ -61,8 +62,8 @@ row m n = div n m
 generates the point an item n should occur at if the grid has rows of length m
 and the items number is n
 -}
-point :: (Integral a) => a -> a -> Point
-point m n = mapPair fromIntegral $ divMod n m
+point :: (Integral a) => Spacing -> a -> a -> Point
+point s m n = mapPair ((s *) . fromIntegral) $ divMod n m
 
 mapPair :: (a -> b) -> (a,a) -> (b,b)
 mapPair f (x,y) = (f x, f y)
