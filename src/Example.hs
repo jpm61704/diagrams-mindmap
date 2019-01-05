@@ -1,6 +1,7 @@
 module Example where
 
 import Construct
+import Layout
 
 
 -- * Topics
@@ -45,3 +46,9 @@ relations = [ "Language" -| "terms defined by"   |-> "Syntax"
 
 exampleMM :: Mindmap
 exampleMM = Mindmap e_topics relations
+
+
+
+-- type Layout = Topic -> Either DiagramError Point
+
+

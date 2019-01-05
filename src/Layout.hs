@@ -32,6 +32,12 @@ data DiagramError = NotATopic deriving (Eq, Show)
 --------------------------------------------------------------------------------
 
 
+
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+
+
 -- | produces a square-ish grid of topics given a mindmap and spacing parameter
 grid :: Mindmap -> Spacing -> Layout
 grid mm s = \k -> M.findWithDefault (Left NotATopic) k point_map
@@ -67,3 +73,5 @@ point s m n = mapPair ((s *) . fromIntegral) $ divMod n m
 
 mapPair :: (a -> b) -> (a,a) -> (b,b)
 mapPair f (x,y) = (f x, f y)
+
+

@@ -24,7 +24,7 @@ dependencies:
 - containers
 - diagrams-core
 - diagrams-lib
-- diagrams-svg
+- diagrams-rasterific
 
 library:
   source-dirs: src

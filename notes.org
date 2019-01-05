@@ -37,3 +37,10 @@
      - See Diagrams.Backend.Rasterific.Text
    - Support shapes other than circles
    - constructors and composition functions for Layouts
+
+** January 5th, 2019
+   - Switching to rasterific for text-envelope support
+   - Scaling text now works well and is centered
+   - Added white background to read better
+   NEXT add combinators for constructing custom layouts
+
